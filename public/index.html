@@ -35,7 +35,7 @@
         
         form input[type="submit"] {
             width: 9%;
-            float:right;
+            float: right;
             background: rgb(130, 224, 255);
             border: none;
             padding: 10px;
@@ -58,7 +58,7 @@
 </head>
 
 <body>
-    <ul id="messages"></ul>
+    <div <div class="messages"></div>
     <form action="" id="messageform">
         <input id="message" name="message" autocomplete="off" />
         <input type="submit" value="Submit">
@@ -72,8 +72,8 @@
     });
     
     socket.on('message',function(message){
-        console.log('New Mesasge:')
-        console.log(message.text)
+
+        $('.messages').append('<p>'+ message.text + '</p>')
     });
     
     //handles the submitting of new message
@@ -84,10 +84,10 @@
         socket.emit('message',{
             text: $message.val()
         })
+        console.log($message.val())
         $message.val('');
-        
-        
     })
+    
 
 </script>
 
