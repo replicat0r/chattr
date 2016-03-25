@@ -11,17 +11,15 @@ io.on('connection', function(socket) {
     console.log('user connect via sockets')
     socket.emit('message', {
         text: "welcome to the chat application",
-        timeStamp: moment.valueOf()
+        timeStamp: moment.valueOf(),
+        name: 'System'
 
     })
 
     socket.on('message', function(message) {
-        console.log('Message Received on server: ' + message.text)
-        io.emit('message', {
-
-            text: message.text,
-            timeStamp: moment.valueOf()
-        })
+        
+        message.timeStamp = moment.valueOf()
+        io.emit('message', message)
     })
 
 

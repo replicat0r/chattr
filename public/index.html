@@ -8,7 +8,7 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
-   
+
     <style>
         * {
             margin: 0;
@@ -67,7 +67,24 @@
     </form>
 </body>
 <script>
+    function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    
+    return undefined;
+}
+
+    var name = getQueryVariable('name') || 'Anonymous'
+    var room = getQueryVariable('room')
+    
     var socket = io();
+    
     socket.on('connect',function(){
         console.log('connected to socket server')
 
@@ -75,7 +92,9 @@
     
     socket.on('message',function(message){
         var timeStamp = moment.utc(message.timeStamp).local().format(' h:mm:ss a')
-        $('.messages').append('<p>'+ message.text + timeStamp +'</p>')
+        var $messages = $('.messages');
+        $messages.append('<p><strong>' + message.name + " " + timeStamp +   ' </string></p>')
+        $messages.append('<p>' + message.text + '<p>')
     });
     
     //handles the submitting of new message
@@ -84,12 +103,12 @@
         e.preventDefault();
         var $message = $form.find('input[name=message]')
         socket.emit('message',{
+            name: name,
             text: $message.val()
         })
         console.log($message.val())
         $message.val('');
     })
-    
 
 </script>
 
