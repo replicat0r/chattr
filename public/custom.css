@@ -1,0 +1,73 @@
+html,body{
+font-family: 'Open Sans', sans-serif;
+}
+.centered-axis-xy {
+    position: absolute!important;
+    left: 50%!important;
+    ;
+    top: 50%!important;
+    ;
+    -webkit-transform: translate(-50%, -80%)!important;
+    ;
+    -moz-transform: translate(-50%, -80%)!important;
+    ;
+    -ms-transform: translate(-50%, -80%)!important;
+    ;
+    -o-transform: translate(-50%, -80%)!important;
+    ;
+    transform: translate(-50%, -80%)!important;
+    ;
+}
+
+.centered-axis-y {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+    transform: translatey(-50%);
+}
+
+.index{
+    height:100vh;
+    background: url('https://images.unsplash.com/photo-1422433555807-2559a27433bd');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow: hidden;
+}
+
+.chatwindow{
+    background: rgba(0, 0, 0, 0.55);
+    padding:3em;
+    color:white;
+}
+
+h5{
+    font-weight: 300!important;
+    text-align: center;
+    margin-bottom:2em;
+ 
+}
+
+.chatContainer{
+    margin-top: 2em;
+    text-align: center;
+}
+.index .btn{
+    display: inline-block;
+    background: #1abc9c;
+}
+
+
+
+  /* label color */
+   .input-field label {
+     color:rgba(255,255,255,0.7);
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label,.input-field input[type=text]:focus {
+     color:#1abc9c;
+      
+   }

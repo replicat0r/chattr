@@ -4,23 +4,41 @@
 <head>
     <meta charset="utf-8">
     <title>title</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"></link>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" href="custom.css"></link>
 
 </head>
 
-<body>
-    <h1>Join Chat</h1>
-    <form action="/chat.html">
-        <label for="">Display Name</label>
-        <input type="text" name="name" />
-        <label for="">Join Chat Room</label>
-        <input type="text" name="room" />
-        <input type="submit" value="Join Chat"> </input>
-    </form>
-
+<body class="index row">
+    <div class="centered-axis-xy col s12 m6 l5 ">
+        <div class=" chatwindow z-depth-3 ">
+            <h5>Welcome To Chatr</h5>
+            <form action="/chat.html">
+                    <form class="col s12 ">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="name" type="text" class="validate">
+                                <label for="name"> Username</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="room" type="text" class="validate">
+                                <label for="room">Room Name</label>
+                            </div>
+                        </div>
+                        <div class=" chatContainer">
+                        <input type="submit" value="Join Chat" class="btn btn-success "> </input>
+                        </div>
+                    </form>
+                </div>
 </body>
 
 </html>
