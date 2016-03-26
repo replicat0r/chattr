@@ -14,20 +14,48 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
-
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 
-<body>
-    <a href="/index.html">change name</a>
-    <h2 class="roomName"></h2>
+<body class="chat row">
+    <div class="col s3 sidebar">
+        <h5 class="header"> Current Users</h5>
+        <ul>
 
-    <div <div class="messages"></div>
-    <form action="" id="messageform">
-        <input id="message" name="message" autocomplete="off" />
-        <input type="submit" value="Submit">
-    </form>
+            <li> <i class="fa fa-user"></i> <p> John</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col s9 chatroom">
+        <div class="chatHeader">
+        <a href="/index.html">change name</a>
+        <h5 class="roomName"></h5>
+        <p>3 people in the channel</p>
+        </div>
+        
+        <div class="chatBody">
+
+        <div <div class="messages"></div>
+        </div>
+        <div class="chatInput">
+        <form action="" id="messageform">
+            <input id="message" placeholder="enter your message here..." name="message" autocomplete="off" />
+       <button class="btn-floating btn-small waves-effect waves-light submitbtn">
+<i class="material-icons">send</i>
+       </button>
+       
+        </form>
+        
+        </div>
+    </div>
+
+
 </body>
+
 <script src="app.js">
 
 </script>

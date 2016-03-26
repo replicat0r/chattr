@@ -67,7 +67,91 @@ h5{
      color:rgba(255,255,255,0.7);
    }
    /* label focus color */
-   .input-field input[type=text]:focus + label,.input-field input[type=text]:focus {
+   .input-field input[type=text]:focus + label, {
      color:#1abc9c;
       
    }
+.chat {
+       height:100vh;
+       margin-bottom: 0;
+ 
+}
+.chat .sidebar{
+    height: 100%;
+    padding:1em;
+    background: #38404B;
+}
+
+.chatroom{
+    height: 100%;
+    padding:2em;
+    background:#F5F8FC;
+    padding:0!important;
+}
+
+.sidebar ul li{
+    display: flex;
+}
+
+.sidebar p{
+    margin: 0;
+    padding: 9px 15px;
+    font-size: 1em;
+    color: white;
+}
+.fa-user{
+    padding: 10px 12px;
+    width: 40px;
+    height: 40px;
+    background: #2B2F38;
+    border-radius: 50%;
+    color: #40454B;
+    font-size: 20px;
+}
+.header{
+    color:white;
+    border-bottom:1px solid #2B2F38;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.chatHeader{
+    text-align: center;
+    border-bottom: 1px solid #DADADA;
+}
+.chatBody{
+    height:70vh;
+    padding:1em;
+}
+.chatInput{
+    padding: 0 1em;
+        position: absolute;
+    width: 75%;
+    bottom: 0;
+    background: white;
+}
+.submitbtn{
+    float:right;
+}
+#message{
+    box-shadow: none!important;
+    border-bottom: 0!important;
+    margin-bottom:0;
+    width: 80%;
+}
+
+.btn-floating i {
+    width: inherit;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 32px;
+}
+
+.btn-floating{
+    height: 32px;
+    width:32px;
+    margin-top: 5px;
+    
+}
